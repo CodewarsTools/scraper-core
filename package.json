@@ -1,0 +1,22 @@
+{
+  "name": "@codewarstools/scraper-core",
+  "version": "1.0.0",
+  "description": "Shared Puppeteer utilities for web scraping",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": "./src/index.js",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check": "npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^24.0.0"
+  }
+}

@@ -1,0 +1,2 @@
+export const NAVIGATION_TIMEOUT = 30_000;
+export const SELECTOR_TIMEOUT = 10_000;
