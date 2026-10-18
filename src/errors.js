@@ -5,6 +5,7 @@ export const ERROR_CODES = Object.freeze(
     NAVIGATION_FAILED: 'NAVIGATION_FAILED',
     SELECTOR_TIMEOUT: 'SELECTOR_TIMEOUT',
     BROWSER_LAUNCH_FAILED: 'BROWSER_LAUNCH_FAILED',
+    INVALID_BEFORE_EXTRACT: 'INVALID_BEFORE_EXTRACT',
     UNKNOWN_ERROR: 'UNKNOWN_ERROR',
   }),
 );
@@ -85,6 +86,15 @@ export const browserLaunchError = (cause) =>
     message: 'Failed to launch the browser',
     cause,
   });
+
+export const validateBeforeExtract = (beforeExtract) => {
+  if (beforeExtract !== undefined && typeof beforeExtract !== 'function') {
+    throw scraperError({
+      code: ERROR_CODES.INVALID_BEFORE_EXTRACT,
+      message: `beforeExtract must be a function, received type: ${typeof beforeExtract}`,
+    });
+  }
+};
 
 export const errorResult = (error) => {
   if (error instanceof ScraperError) {

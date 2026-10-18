@@ -15,6 +15,7 @@ export default Object.freeze(
     pageExtractor: pageExtractor.createPageExtractor({
       navigationError: errors.navigationError,
       selectorTimeoutError: errors.selectorTimeoutError,
+      validateBeforeExtract: errors.validateBeforeExtract,
       defaultNavigationTimeout: constants.NAVIGATION_TIMEOUT,
       defaultSelectorTimeout: constants.SELECTOR_TIMEOUT,
     }),

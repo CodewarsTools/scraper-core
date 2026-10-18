@@ -1,6 +1,7 @@
 export const createPageExtractor = ({
   navigationError,
   selectorTimeoutError,
+  validateBeforeExtract,
   defaultNavigationTimeout,
   defaultSelectorTimeout,
 }) => {
@@ -17,6 +18,8 @@ export const createPageExtractor = ({
       } catch (cause) {
         throw navigationError(cause, navigationTimeout);
       }
+
+      validateBeforeExtract(beforeExtract);
 
       if (beforeExtract) {
         await beforeExtract(page);
