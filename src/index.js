@@ -1,13 +1,6 @@
-export {
-  ERROR_CODES,
-  ScraperError,
-  scraperError,
-  navigationError,
-  selectorTimeoutError,
-  browserLaunchError,
-  errorResult,
-} from './errors.js';
+import lib from './loader.js';
 
-export { launchBrowser } from './browser.js';
-
-export { pageExtractor } from './page-extractor.js';
+export const {
+  launchBrowser,
+  pageExtractor,
+} = lib;

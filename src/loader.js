@@ -1,13 +1,14 @@
-export {
-  ERROR_CODES,
-  ScraperError,
-  scraperError,
-  browserLaunchError,
-  errorResult,
-} from './errors.js';
+import * as browser from './browser.js';
+import * as constants from './constants.js';
+import * as errors from './errors.js';
+import * as pageExtractor from './page-extractor.js';
 
-export { launchBrowser } from './browser.js';
+const lib = Object.freeze(Object.assign(
+  Object.create(null),
+  browser,
+  constants,
+  errors,
+  pageExtractor,
+));
 
-export { pageExtractor } from './page-extractor.js';
-
-export { extractText } from './loader.js';
+export default lib;
