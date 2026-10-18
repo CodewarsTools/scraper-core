@@ -1,14 +1,14 @@
 export const createPageExtractor = ({
   navigationError,
   selectorTimeoutError,
-  NAVIGATION_TIMEOUT,
-  SELECTOR_TIMEOUT,
+  defaultNavigationTimeout,
+  defaultSelectorTimeout,
 }) => {
   return ({
-    navigationTimeout = NAVIGATION_TIMEOUT,
-    selectorTimeout = SELECTOR_TIMEOUT,
-  } = {}) => {
-    const extractText = async (page, { url, selector, beforeExtract }) => {
+    navigationTimeout = defaultNavigationTimeout,
+    selectorTimeout = defaultSelectorTimeout,
+} = {}) => {
+    const extractText = async (page, { url, selector, beforeExtract } = {}) => {
       try {
         await page.goto(url, {
           waitUntil: 'domcontentloaded',
@@ -28,7 +28,7 @@ export const createPageExtractor = ({
         });
       } catch (cause) {
         if (cause?.name === 'TimeoutError') {
-          throw selectorTimeoutError(cause, selectorTimeout, selector);;
+          throw selectorTimeoutError(cause, selectorTimeout, selector);
         }
 
         throw cause;

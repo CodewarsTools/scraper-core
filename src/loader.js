@@ -13,8 +13,10 @@ export default Object.freeze(
     }),
 
     pageExtractor: pageExtractor.createPageExtractor({
-      ...constants,
-      ...errors,
+      navigationError: errors.navigationError,
+      selectorTimeoutError: errors.selectorTimeoutError,
+      defaultNavigationTimeout: constants.NAVIGATION_TIMEOUT,
+      defaultSelectorTimeout: constants.SELECTOR_TIMEOUT,
     }),
   }),
 );
