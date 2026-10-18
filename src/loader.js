@@ -1,14 +1,20 @@
+import puppeteer from 'puppeteer';
+
 import * as browser from './browser.js';
 import * as constants from './constants.js';
 import * as errors from './errors.js';
 import * as pageExtractor from './page-extractor.js';
 
-const lib = Object.freeze(Object.assign(
-  Object.create(null),
-  browser,
-  constants,
-  errors,
-  pageExtractor,
-));
+export default Object.freeze(
+  Object.assign(Object.create(null), browser, constants, errors, {
+    launchBrowser: browser.createLaunchBrowser({
+      puppeteer,
+      browserLaunchError: errors.browserLaunchError,
+    }),
 
-export default lib;
+    pageExtractor: pageExtractor.createPageExtractor({
+      ...constants,
+      ...errors,
+    }),
+  }),
+);

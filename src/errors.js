@@ -72,10 +72,10 @@ export const navigationError = (cause, timeout) => {
   return navigationFailedError(cause);
 };
 
-export const selectorTimeoutError = (cause, timeout) =>
+export const selectorTimeoutError = (cause, timeout, selector) =>
   scraperError({
     code: ERROR_CODES.SELECTOR_TIMEOUT,
-    message: `Selector was not found after ${timeout} ms`,
+    message: `Selector "${selector}" was not found after ${timeout} ms`,
     cause,
   });
 
