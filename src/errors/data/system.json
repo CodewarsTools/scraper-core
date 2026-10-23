@@ -1,0 +1,18 @@
+{
+  "SYSTEM_UNKNOWN_ERROR_CODE": {
+    "message": "Unknown error code: {key}",
+    "params": ["key"]
+  },
+  "SYSTEM_MISSING_ERROR_PARAMETER": {
+    "message": "Missing error parameter: {param}",
+    "params": ["param"]
+  },
+  "SYSTEM_INVALID_ERROR_CODE_TYPE": {
+    "message": "Error code must be a string, received type: {type}",
+    "params": ["type"]
+  },
+  "SYSTEM_INVALID_ERROR_PARAMETERS_TYPE": {
+    "message": "Error parameters must be an object, received type: {type}",
+    "params": ["type"]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "DEPRECATED_SELECTOR": {
+    "message": "Selector \"{selector}\" may no longer be supported",
+    "params": ["selector"]
+  },
+  "UNKNOWN_WARNING": {
+    "message": "An unexpected warning occurred",
+    "params": []
+  }
+}

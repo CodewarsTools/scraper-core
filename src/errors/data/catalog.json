@@ -1,0 +1,80 @@
+{
+  "INVALID_URL_TYPE": {
+    "message": "url must be a string, received type: {type}",
+    "params": ["type"]
+  },
+  "EMPTY_URL": {
+    "message": "url must not be empty",
+    "params": []
+  },
+  "INVALID_URL": {
+    "message": "Invalid URL",
+    "params": []
+  },
+  "INVALID_SELECTOR_TYPE": {
+    "message": "selector must be a string, received type: {type}",
+    "params": ["type"]
+  },
+  "EMPTY_SELECTOR": {
+    "message": "selector must not be empty",
+    "params": []
+  },
+  "INVALID_BEFORE_EXTRACT": {
+    "message": "beforeExtract must be a function, received type: {type}",
+    "params": ["type"]
+  },
+  "INVALID_LANGUAGE_CASE": {
+    "message": "Invalid language case",
+    "params": []
+  },
+  "UNSUPPORTED_LANGUAGE": {
+    "message": "Unsupported language: {language}",
+    "params": ["language"]
+  },
+  "AUTHENTICATION_REQUIRED": {
+    "message": "Authentication is required. Provide a valid {tokenName}.",
+    "params": ["tokenName"]
+  },
+  "AUTHENTICATION_FAILED": {
+    "message": "Authentication failed. Check your {tokenName}.",
+    "params": ["tokenName"]
+  },
+  "BROWSER_LAUNCH_FAILED": {
+    "message": "Failed to launch the browser",
+    "params": []
+  },
+  "NETWORK_ERROR": {
+    "message": "Failed to navigate to the solution page: {cause}",
+    "params": ["cause"]
+  },
+
+  "INVALID_TIMEOUT_TYPE": {
+    "message": "timeout must be a finite number, received type: {type}",
+    "params": ["type"]
+  },
+
+  "NAVIGATION_TIMEOUT": {
+    "message": "Navigation timed out after {timeout} ms",
+    "params": ["timeout"]
+  },
+  "NAVIGATION_FAILED": {
+    "message": "Failed to navigate to the solution page",
+    "params": []
+  },
+  "SELECTOR_TIMEOUT": {
+    "message": "Selector \"{selector}\" was not found after {timeout} ms",
+    "params": ["selector", "timeout"]
+  },
+  "SOLUTION_NOT_FOUND": {
+    "message": "Solution not found after waiting {timeout} ms",
+    "params": ["timeout"]
+  },
+  "SOLUTIONS_LOCKED": {
+    "message": "Solutions are locked. This may be because you have not solved this kata yet. Unlocking the solutions will forfeit your eligibility for this kata.",
+    "params": []
+  },
+  "UNKNOWN_ERROR": {
+    "message": "An unexpected error occurred",
+    "params": []
+  }
+}
